@@ -8,6 +8,11 @@ Statistical analysis demonstrating the impact of peer tutoring on student engage
 - **44% reduction** in student disengagement (77% → 33% zero completions)
 - **Clear ROI** for expanding tutoring programs
 
+<p align="center">
+  <img src="data_modeling_output/histogram_2025Q1.png" width="650">
+</p>
+<p align="center"><i>Density distribution showing dramatic reduction in zero-completion students with tutoring</i></p>
+
 ## Repository Contents
 
 ### Notebooks
@@ -27,9 +32,9 @@ Statistical analysis demonstrating the impact of peer tutoring on student engage
    - Generates visualizations and model metrics
 
 ### Key Visualizations
-- [ECDF Analysis](data_modeling_output/ecdf_2025Q1.png) - Shows 43.65% gap in student engagement
-- [Distribution Comparison](data_modeling_output/histogram_2025Q1.png) - Density comparison by tutoring status
-- [Model Metrics](data_modeling_output/zinb_model_metrics_2025Q1.csv) - Statistical model results
+- [ECDF Analysis](data_modeling_output/ecdf_2025Q1.png) - Empirical cumulative distribution showing 43.65% gap in student engagement
+- [Distribution Comparison](data_modeling_output/histogram_2025Q1.png) - Density histogram comparing progress distribution by tutoring status (shown above)
+- [Model Metrics](data_modeling_output/zinb_model_metrics_2025Q1.csv) - Statistical model results including IRR, confidence intervals, and p-values
 
 ### Presentation
 - [Executive Summary](presentations/tutoring_effectiveness_presentation.pdf) - Stakeholder presentation
@@ -52,6 +57,12 @@ Statistical analysis demonstrating the impact of peer tutoring on student engage
 - **Self-Starters**: 23% of untutored students who made progress independently
 - **Challenge Group**: 77% of untutored students with no progress
 
+## Results Summary
+This analysis provided evidence-based recommendations that:
+- Justified expansion of the tutoring program
+- Identified specific student segments for targeted intervention
+- Established a framework for ongoing program evaluation
+
 ## Data Privacy Note
 All data files containing student information have been excluded from this repository to protect privacy. The notebooks demonstrate the analysis process and results without exposing sensitive information. 
 
@@ -61,4 +72,4 @@ To reproduce this analysis, you would need:
 - Proper data access permissions
 
 ## Contact
-[Masae Kobayashi Wen] - [mkwen2024@gmail.com] - [https://www.linkedin.com/in/masae-kobayashi-wen-42241a13/]
+[Masae Kobayashi Wen] - [mkwen2024@gmail.com] - [[LinkedIn](https://www.linkedin.com/in/masae-kobayashi-wen-42241a13/)]
