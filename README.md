@@ -37,12 +37,15 @@ Statistical analysis demonstrating the impact of peer tutoring on student engage
 - [Model Metrics](data_modeling_output/zinb_model_metrics_2025Q1.csv) - Statistical model results including IRR, confidence intervals, and p-values
 
 ### Presentation
-- [Executive Summary](presentations/tutoring_effectiveness_presentation.pdf) - Stakeholder presentation
+- [Executive Summary (PDF)](presentations/Calbright_Tutoring_Impact_Analysis_2025_MKW.pdf) - Stakeholder presentation with key findings and recommendations
+- [Executive Summary (Google Slides)](https://docs.google.com/presentation/d/1XuSMRpGwxlzaQ8unsDDhAwWEUM7NEmPTf7Ub73tAdzI/edit?usp=sharing) - Includes detailed speaker notes
 
 ## Technical Skills Demonstrated
 - **Data Wrangling**: Complex data cleaning, validation, and transformation
 - **Statistical Analysis**: Zero-Inflated Negative Binomial (ZINB) regression, hypothesis testing
 - **Python Libraries**: pandas, numpy, statsmodels, matplotlib, seaborn
+- **Environment Management**: Resolving dependency and installation issues in conda/pip to ensure project stability
+- **Code Quality**: Black formatter for PEP 8 compliance, clean notebook outputs
 - **Business Impact**: Translating statistical findings into actionable recommendations
 
 ## Methodology

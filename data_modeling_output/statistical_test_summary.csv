@@ -1,0 +1,6 @@
+Test,Metric,Observed Difference,CI Lower,CI Upper,p_value
+Mann-Whitney U,Statistic,244099.500000,,,0.000000
+Permutation (Mean),Mean Difference,1.489473,-0.245799,0.286351,0.000000
+Permutation (Median),Median Difference,1.000000,0.000000,0.000000,0.000000
+Bootstrap (Mean),Mean Difference,1.489473,1.093814,1.909953,
+Bootstrap (Median),Median Difference,1.000000,1.000000,2.000000,

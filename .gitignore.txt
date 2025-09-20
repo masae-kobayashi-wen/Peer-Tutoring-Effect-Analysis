@@ -1,0 +1,19 @@
+# Data files with sensitive information
+raw_data/*.csv
+raw_data/*.xlsx
+data_wrangling_output/*.csv
+data_wrangling_output/*.xlsx
+data_modeling_output/BUS500-501_2025Q1_glm.csv
+data_modeling_output/*.pkl
+
+# Keep README files
+!*/README.md
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# System files
+.DS_Store
+__pycache__/
+*.pyc
