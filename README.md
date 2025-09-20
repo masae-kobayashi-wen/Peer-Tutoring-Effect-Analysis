@@ -16,17 +16,17 @@ Statistical analysis demonstrating the impact of peer tutoring on student engage
 ## Repository Contents
 
 ### Notebooks
-1. **[DA_2025Q1_1a_post_tutor_form_wrangling.ipynb](notebooks/DA_2025Q1_1a_post_tutor_form_wrangling.ipynb)** 
+1. **[DA_2025Q1_1a_post_tutor_form_wrangling.ipynb](notebooks/DA_2025Q1_1a_post_tutor_form_wrangling_mkw.ipynb)** 
    - Processes 449 tutoring session records
    - Identifies 137 unique tutored students
    - Handles data validation and manual email correction
 
-2. **[DA_2025Q1_1b_gradebook_wrangling.ipynb](notebooks/DA_2025Q1_1b_gradebook_wrangling.ipynb)** 
+2. **[DA_2025Q1_1b_gradebook_wrangling.ipynb](notebooks/DA_2025Q1_1b_gradebook_wrangling_mkw.ipynb)** 
    - Processes gradebook data for 2,558 students
    - Calculates quarterly progress metrics
    - Segments students by tutoring status
 
-3. **[DA_2025Q1_2_statistical_modeling.ipynb](notebooks/DA_2025Q1_2_statistical_modeling.ipynb)** 
+3. **[DA_2025Q1_2_statistical_modeling.ipynb](notebooks/DA_2025Q1_2_statistical_modeling_mkw.ipynb)** 
    - Performs statistical analysis including ZINB regression
    - Validates tutoring effectiveness with multiple methods
    - Generates visualizations and model metrics
@@ -37,7 +37,7 @@ Statistical analysis demonstrating the impact of peer tutoring on student engage
 - [Model Metrics](data_modeling_output/zinb_model_metrics_2025Q1.csv) - Statistical model results including IRR, confidence intervals, and p-values
 
 ### Presentation
-- [Executive Summary (PDF)](presentations/Calbright_Tutoring_Impact_Analysis_2025_MKW.pdf) - Stakeholder presentation with key findings and recommendations
+- [Executive Summary (PDF)](presentations/Calbright_Tutoring_Impact_Analysis_2025Q1_MKW.pdf) - Stakeholder presentation with key findings and recommendations
 - [Executive Summary (Google Slides)](https://docs.google.com/presentation/d/1XuSMRpGwxlzaQ8unsDDhAwWEUM7NEmPTf7Ub73tAdzI/edit?usp=sharing) - Includes detailed speaker notes
 
 ## Technical Skills Demonstrated
