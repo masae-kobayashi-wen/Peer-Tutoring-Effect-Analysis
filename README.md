@@ -1,78 +1,98 @@
-# Peer Tutoring Effectiveness Analysis
+# Impact Analysis Using Statistical Modeling
 
-## Project Overview
-Statistical analysis demonstrating the impact of peer tutoring on student engagement in Calbright College's Data Analysis Program. Using advanced statistical modeling (Zero-Inflated Negative Binomial regression), this project shows that tutored students complete 2.16x more competencies than untutored students.
+## Executive Summary
 
-## Key Findings
-- **2.16x improvement** in competency completion for tutored students (p < 0.00001)
-- **44% reduction** in student disengagement (77% → 33% zero completions)
-- **Clear ROI** for expanding tutoring programs
+Statistical analysis demonstrating 2.16x improvement in program effectiveness through targeted intervention. Using Zero-Inflated Negative Binomial regression on 2,558 participants, this project quantifies the impact of support programs on user engagement and success metrics.
+
+**Key Impact**: 44% reduction in user disengagement (77% → 33% zero completions)
 
 <p align="center">
   <img src="data_modeling_output/histogram_2025Q1.png" width="650">
 </p>
-<p align="center"><i>Density distribution showing dramatic reduction in zero-completion students with tutoring</i></p>
+<p align="center"><i>Density distribution showing dramatic reduction in disengagement with intervention</i></p>
 
-## Repository Contents
+## Business Problem
 
-### Notebooks
-1. **[DA_2025Q1_1a_post_tutor_form_wrangling.ipynb](notebooks/DA_2025Q1_1a_post_tutor_form_wrangling_mkw.ipynb)** 
-   - Processes 449 tutoring session records
-   - Identifies 137 unique tutored students
-   - Handles data validation and manual email correction
-
-2. **[DA_2025Q1_1b_gradebook_wrangling.ipynb](notebooks/DA_2025Q1_1b_gradebook_wrangling_mkw.ipynb)** 
-   - Processes gradebook data for 2,558 students
-   - Calculates quarterly progress metrics
-   - Segments students by tutoring status
-
-3. **[DA_2025Q1_2_statistical_modeling.ipynb](notebooks/DA_2025Q1_2_statistical_modeling_mkw.ipynb)** 
-   - Performs statistical analysis including ZINB regression
-   - Validates tutoring effectiveness with multiple methods
-   - Generates visualizations and model metrics
-
-### Key Visualizations
-- [ECDF Analysis](data_modeling_output/ecdf_2025Q1.png) - Empirical cumulative distribution showing 43.65% gap in student engagement
-- [Distribution Comparison](data_modeling_output/histogram_2025Q1.png) - Density histogram comparing progress distribution by tutoring status (shown above)
-- [Model Metrics](data_modeling_output/zinb_model_metrics_2025Q1.csv) - Statistical model results including IRR, confidence intervals, and p-values
-
-### Presentation
-- [Executive Summary (PDF)](presentations/Calbright_Data_Analysis_Tutoring_Effect_Evaluation_2025Q1_MKW.pdf) - Stakeholder presentation with key findings and recommendations
-- [Executive Summary (Google Slides)](https://docs.google.com/presentation/d/1XuSMRpGwxlzaQ8unsDDhAwWEUM7NEmPTf7Ub73tAdzI/edit?usp=sharing) - Includes detailed speaker notes
-
-## Technical Skills Demonstrated
-- **Data Wrangling**: Complex data cleaning, validation, and transformation
-- **Statistical Analysis**: Zero-Inflated Negative Binomial (ZINB) regression, hypothesis testing
-- **Python Libraries**: pandas, numpy, statsmodels, matplotlib, seaborn
-- **Environment Management**: Resolving dependency and installation issues in conda/pip to ensure project stability
-- **Code Quality**: Black formatter for PEP 8 compliance, clean notebook outputs
-- **Business Impact**: Translating statistical findings into actionable recommendations
+An online educational platform needed to evaluate the ROI of their peer support program to make data-driven decisions about resource allocation. Key questions:
+- Does the intervention program justify its cost?
+- Which user segments benefit most from support?
+- How can we optimize program targeting?
 
 ## Methodology
-1. **Data Collection**: Q1 2025 student records from Calbright College
-2. **Data Validation**: Manual verification of tutoring records against gradebook
-3. **Statistical Modeling**: ZINB regression to handle overdispersed count data with excess zeros
-4. **Validation**: Bootstrap analysis and permutation testing
 
-## Strategic Student Segments Identified
-- **Successful Engagement**: 67% of tutored students who made progress
-- **Opportunity Group**: 33% of tutored students still at zero (targeted intervention needed)
-- **Self-Starters**: 23% of untutored students who made progress independently
-- **Challenge Group**: 77% of untutored students with no progress
+### Data Pipeline
+1. **Data Integration**: Merged intervention records (449 sessions) with user progress data (2,558 users)
+2. **Statistical Modeling**: Applied ZINB regression to handle zero-inflated count data
+3. **Validation**: Bootstrap analysis and permutation testing for robust results
 
-## Results Summary
-This analysis provided evidence-based recommendations that:
-- Justified expansion of the tutoring program
-- Identified specific student segments for targeted intervention
-- Established a framework for ongoing program evaluation
+### Analysis Notebooks
+- [Data Wrangling - Intervention Records](notebooks/DA_2025Q1_1a_post_tutor_form_wrangling_mkw.ipynb)
+- [Data Wrangling - User Progress](notebooks/DA_2025Q1_1b_gradebook_wrangling_mkw.ipynb)
+- [Statistical Modeling & Testing](notebooks/DA_2025Q1_2_statistical_modeling_mkw.ipynb)
+
+## Technical Skills Demonstrated
+- **Data Wrangling & Integration**: Complex data cleaning, validation, and transformation across multiple sources
+- **Exploratory Data Analysis (EDA)**: Patterns and trends identification via Statistical methods and visualizations
+- **Statistical Analysis & Modeling**: Zero-Inflated Negative Binomial (ZINB) regression, hypothesis testing, bootstrap methods
+- **Python Stack**: Pandas, numpy, scipy, statsmodels, matplotlib, seaborn
+- **Best Practices**: Reproducible analysis via environment management and Black code formatting
+- **Business Communication**: Executive presentations, actionable insights
+
+## Results & Business Recommendations
+
+### Quantified Impact
+- **2.16x improvement** in completion rates (IRR: 2.16, 95% CI: [1.56, 3.01], p < 0.00001)
+- **Clear positive ROI** based on improved user engagement metrics
+
+### Strategic Segments Identified
+    
+| Segment                     | Description                                  | Action               |
+|-----------------------------|----------------------------------------------|----------------------|
+| **High Responders (67%)**   | Tutored students showing clear progress      | Continue support     |
+| **Opportunity Group (33%)** | Tutored students with no progress            | Target intervention  |
+| **Self-Starters (23%)**     | Untutored students progressing independently | No action needed     |
+| **At-Risk Group (77%)**     | Untutored students with zero progress        | Prioritize outreach  |
+
+### Recommendations
+1. **Target intervention** for Opportunity Group for quick win
+2. **Maintain current support** for High Responders
+3. **Expand program** to At-Risk Group via continued outreach
+
+### Deliverables
+- [Executive Presentation (PDF)](presentations/Calbright_Data_Analysis_Tutoring_Effect_Evaluation_2025Q1_MKW.pdf)
+- [Interactive Executive Presentation with Notes (Google Slides)](https://docs.google.com/presentation/d/1XuSMRpGwxlzaQ8unsDDhAwWEUM7NEmPTf7Ub73tAdzI/edit?usp=sharing)
+- [Statistical Model Metrics](data_modeling_output/zinb_model_metrics_2025Q1.csv)
+- [Statistical Tests Summary](data_modeling_output/statistical_test_summary_2025Q1.csv)
+- [Main Outputs](data_modeling_output/)
+
+## Next Steps
+
+1. **Predictive Model**: Develop early warning system to identify at-risk users
+2. **A/B Testing**: Test targeted intervention for Opportunity Group
+3. **Dashboard**: Real-time monitoring of segment movements
+4. **Scale Analysis**: Apply framework to other programs/interventions
+
+## Repository Structure
+```
+├── raw_data/                # README only (data excluded for privacy)
+├── notebooks/               # Analysis notebooks with full methodology
+├── data_wrangling_output/   # README only (data excluded for privacy)
+├── data_modeling_output/    # Visualizations, statistical modeling and tests results
+├── presentations/           # Stakeholder communications
+├── README.md                # Project overview and results
+├── .gitignore               # Excludes sensitive data files
+└── requirements.txt         # Environment specifications
+```
 
 ## Data Privacy Note
-All data files containing student information have been excluded from this repository to protect privacy. The notebooks demonstrate the analysis process and results without exposing sensitive information. 
 
-To reproduce this analysis, you would need:
-- Post tutor form data with student identifiers
-- Gradebook export data from a learning management system
-- Proper data access permissions
+All data files containing participant information have been excluded from this repository to protect privacy. Raw data and processed datasets are not included in this public repository - see individual folder READMEs for data descriptions.
+
+The notebooks demonstrate the complete analysis process and results without exposing sensitive information. To reproduce this analysis, you would need:
+
+- Intervention tracking data with participant identifiers
+- Progress/engagement data from the platform system  
+- Proper data access permissions and compliance approval
 
 ## Contact
 [Masae Kobayashi Wen] - [mkwen2024@gmail.com] - [[LinkedIn](https://www.linkedin.com/in/masae-kobayashi-wen-42241a13/)]

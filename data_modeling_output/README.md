@@ -14,7 +14,7 @@ This folder contains statistical visualizations and model outputs from the tutor
 - `wilcoxon_2025Q1.csv` - Mann-Whitney U test results (p < 0.00001)
 - `permutation_2025Q1.csv` - Permutation test for mean and median differences
 - `bootstrap_2025Q1.csv` - Bootstrap confidence intervals for effect sizes
-- `statistical_test_summary.csv` - Consolidated results from all statistical tests
+- `statistical_test_summary_2025Q1.csv` - Consolidated results from all statistical tests
 
 ## Model Outputs (included)
 - `zinb_model_metrics_2025Q1.csv` - Key model metrics including coefficients, IRR values, and confidence intervals
